@@ -26,8 +26,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm chrome
-    - run: npm yarn
+    - run: npm install-ci-test
+    - run: npm install chrome
+    - run: npm install yarn
     - run: npm ci
     - run: npm run build --if-present
     - run: yarn test
